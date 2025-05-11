@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.YinshidingzhiDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.YinshidingzhiEntity" id="yinshidingzhiMap">
+        <result property="yonghuzhanghao" column="yonghuzhanghao"/>
+        <result property="yonghuxingming" column="yonghuxingming"/>
+        <result property="shiwumingcheng" column="shiwumingcheng"/>
+        <result property="shiwufenlei" column="shiwufenlei"/>
+        <result property="shiwutupian" column="shiwutupian"/>
+        <result property="shiwureliang" column="shiwureliang"/>
+        <result property="danbaizhi" column="danbaizhi"/>
+        <result property="shiwuzhifang" column="shiwuzhifang"/>
+        <result property="tanshuihuahewu" column="tanshuihuahewu"/>
+        <result property="yinshiliang" column="yinshiliang"/>
+        <result property="dingzhishijian" column="dingzhishijian"/>
+        <result property="dingzhixiangqing" column="dingzhixiangqing"/>
+        <result property="yingyangshizhanghao" column="yingyangshizhanghao"/>
+        <result property="yingyangshixingming" column="yingyangshixingming"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.YinshidingzhiVO" >
+		SELECT * FROM yinshidingzhi  yinshidingzhi         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.YinshidingzhiVO" >
+		SELECT  yinshidingzhi.* FROM yinshidingzhi  yinshidingzhi 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.YinshidingzhiView" >
+
+		SELECT  yinshidingzhi.* FROM yinshidingzhi  yinshidingzhi 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.YinshidingzhiView" >
+		SELECT * FROM yinshidingzhi  yinshidingzhi <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+
+</mapper>

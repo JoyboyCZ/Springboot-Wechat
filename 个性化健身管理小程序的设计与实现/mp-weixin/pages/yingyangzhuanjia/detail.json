@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#211534",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "营养专家",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}
